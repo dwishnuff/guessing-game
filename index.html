@@ -38,15 +38,20 @@
       console.log("--answered incorrectly")
       alert("Nope "+userName+",  Dani does have a BA in Biological Anthropology from the University of California, San Diego.")
     }
-    var questionFour = prompt("BONUS: Has Dani been to Brazil?", "yes/no");
-    console.log("Question Four - Has Dani been to Brazil? User Input: "+questionFour)
-    if (questionFour == "yes" || questionFour == "Yes" || questionFour =="YES") {
-      console.log("--answered incorrectly")
-      alert("Nope "+userName+", Dani has never been to South America.");
-    } else {
+//Compare answers to correct answer of 5.
+    var questionFour = prompt("BONUS: How many continents has Dani been to?");
+    console.log("Question Four - How many continents has Dani been to? User Input: "+questionFour)
+    if (questionFour == "5" || questionFour == "five") {
       console.log("--answered correctly")
-      alert("That’s right, "+userName+"! Dani has never been to South America.")
+      alert("That’s right, "+userName+"! Dani has never been to South America or Antarctica.");
+    } else if (questionFour<5) {
+      console.log("--answered incorrectly")
+      alert("Nope, "+userName+"! Dani has been to EVERY continent except for South America and Antarctica.")
     }
+      else {
+      console.log("--answered incorrectly")
+      alert("Nope, "+userName+"! Dani has only been to 5 continents.")
+      }
   </script>
 </head>
   <body>
