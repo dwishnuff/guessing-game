@@ -66,6 +66,21 @@
     }
     alert("All done, "+userName+" you got "+correctCounter+" correct and "+incorrectCounter+" wrong.");
     console.log("answered correctly: "+correctCounter+" answered incorrectly: "+incorrectCounter);
+
+    var questionFive = prompt("BONUS-BONUS: Pick a number:")
+    var qFiveanswer =25
+    console.log("Question Five - Pick a number. Correct answer: 25; User Input "+questionFive)
+    while (qFiveanswer != questionFive){
+      if (questionFive<qFiveanswer){
+        questionFive = prompt("Too low! Pick another number:");
+      }else {
+        questionFive = prompt("Too high! Pick another number:");
+      }
+      console.log("Question Five - Pick a number. Correct answer: 25; User Input "+questionFive)
+    }
+
+      alert("Yay! "+userName+", 25 is the right number!")
+
   </script>
 </head>
   <body>
