@@ -6,6 +6,9 @@
     var userName = prompt("Dani says 'hi'. What's your name?", "");
     console.log("User Name: "+userName)
     alert("Hello "+userName+", so glad you're here!");
+//add variables to count number correct/incorrect.
+    var incorrectCounter=0;
+    var correctCounter =0;
     /*var temperature = prompt ("Is it hot outside?","yes/no");
     if (temperature == "yes" || temperature=="YES" || temperature == "Yes"){
       alert("So sorry. Go get a beer to cool off.");
@@ -16,42 +19,53 @@
     if (questionOne == "yes" || questionOne =="Yes" || questionOne == "YES") {
       console.log("--answered incorrectly")
       alert("Nope "+userName+", Dani has one 4 month old puppy.");
+      incorrectCounter++;
     } else {
       console.log("--answered correctly")
-      alert("That’s right, "+userName+"! Dani has one 4 month old puppy.")
+      alert("That’s right, "+userName+"! Dani has one 4 month old puppy.");
+      correctCounter++;
     }
     var questionTwo = prompt("Was Dani born in MA?", "yes/no");
     console.log("Question Two - Was Dani born in MA? User Input: "+questionTwo)
     if (questionTwo == "yes" || questionTwo == "Yes" || questionTwo =="YES") {
       console.log("--answered incorrectly")
       alert("Nope "+userName+", Dani was born in San Jose, CA.");
+      incorrectCounter++;
     } else {
       console.log("--answered correctly")
-      alert("That’s right, "+userName+"! Dani was born in San Jose, CA.")
+      alert("That’s right, "+userName+"! Dani was born in San Jose, CA.");
+      correctCounter++;
     }
     var questionThree = prompt("Does Dani have a degree in Anthropology?", "yes/no");
     console.log("Question Three - Does Dani have a degree in Anthropology? User Input: "+questionThree)
     if (questionThree == "yes" || questionThree == "Yes" || questionThree =="YES") {
-      console.log("--answered correctly")
+      console.log("--answered correctly");
+      correctCounter++;
       alert("That’s right, "+userName+"! Dani has a BA in Biological Anthropology from the University of California, San Diego.");
     } else {
       console.log("--answered incorrectly")
-      alert("Nope "+userName+",  Dani does have a BA in Biological Anthropology from the University of California, San Diego.")
+      alert("Nope "+userName+",  Dani does have a BA in Biological Anthropology from the University of California, San Diego.");
+      incorrectCounter++;
     }
 //Compare answers to correct answer of 5.
     var questionFour = prompt("BONUS: How many continents has Dani been to?");
     console.log("Question Four - How many continents has Dani been to? User Input: "+questionFour)
     if (questionFour == "5" || questionFour == "five") {
-      console.log("--answered correctly")
+      console.log("--answered correctly");
+      correctCounter++;
       alert("That’s right, "+userName+"! Dani has never been to South America or Antarctica.");
     } else if (questionFour<5) {
       console.log("--answered incorrectly")
-      alert("Nope, "+userName+"! Dani has been to EVERY continent except for South America and Antarctica.")
+      alert("Nope, "+userName+"! Dani has been to EVERY continent except for South America and Antarctica.");
+      incorrectCounter++;
     }
       else {
       console.log("--answered incorrectly")
-      alert("Nope, "+userName+"! Dani has only been to 5 continents.")
-      }
+      alert("Nope, "+userName+"! Dani has only been to 5 continents.");
+      incorrectCounter++;
+    }
+    alert("All done, "+userName+" you got "+correctCounter+" correct and "+incorrectCounter+" wrong.");
+    console.log("answered correctly: "+correctCounter+" answered incorrectly: "+incorrectCounter);
   </script>
 </head>
   <body>
