@@ -1,95 +1,24 @@
 <!DOCTYPE html>
-<html>
 <head>
   <title>Dani Beyer</title>
-  <script type="text/javascript">
-    var userName = prompt("Dani says 'hi'. What's your name?", "");
-    console.log("User Name: "+userName)
-    alert("Hello "+userName+", so glad you're here!");
-//add variables to count number correct/incorrect.
-    var incorrectCounter=0;
-    var correctCounter =0;
-    /*var temperature = prompt ("Is it hot outside?","yes/no");
-    if (temperature == "yes" || temperature=="YES" || temperature == "Yes"){
-      alert("So sorry. Go get a beer to cool off.");
-    } else {
-      alert("Whew! I was getting tired of the heat.")*/
-    var questionOne = prompt("Does Dani have a cat?", "yes/no");
-    console.log("Question One - Does Dani Have a cat? User Input: "+questionOne)
-    if (questionOne == "yes" || questionOne =="Yes" || questionOne == "YES") {
-      console.log("--answered incorrectly")
-      alert("Nope "+userName+", Dani has one 4 month old puppy.");
-      incorrectCounter++;
-    } else {
-      console.log("--answered correctly")
-      alert("That’s right, "+userName+"! Dani has one 4 month old puppy.");
-      correctCounter++;
-    }
-    var questionTwo = prompt("Was Dani born in MA?", "yes/no");
-    console.log("Question Two - Was Dani born in MA? User Input: "+questionTwo)
-    if (questionTwo == "yes" || questionTwo == "Yes" || questionTwo =="YES") {
-      console.log("--answered incorrectly")
-      alert("Nope "+userName+", Dani was born in San Jose, CA.");
-      incorrectCounter++;
-    } else {
-      console.log("--answered correctly")
-      alert("That’s right, "+userName+"! Dani was born in San Jose, CA.");
-      correctCounter++;
-    }
-    var questionThree = prompt("Does Dani have a degree in Anthropology?", "yes/no");
-    console.log("Question Three - Does Dani have a degree in Anthropology? User Input: "+questionThree)
-    if (questionThree == "yes" || questionThree == "Yes" || questionThree =="YES") {
-      console.log("--answered correctly");
-      correctCounter++;
-      alert("That’s right, "+userName+"! Dani has a BA in Biological Anthropology from the University of California, San Diego.");
-    } else {
-      console.log("--answered incorrectly")
-      alert("Nope "+userName+",  Dani does have a BA in Biological Anthropology from the University of California, San Diego.");
-      incorrectCounter++;
-    }
-//Compare answers to correct answer of 5.
-    var questionFour = prompt("BONUS: How many continents has Dani been to?");
-    console.log("Question Four - How many continents has Dani been to? User Input: "+questionFour)
-    if (questionFour == "5" || questionFour == "five") {
-      console.log("--answered correctly");
-      correctCounter++;
-      alert("That’s right, "+userName+"! Dani has never been to South America or Antarctica.");
-    } else if (questionFour<5) {
-      console.log("--answered incorrectly")
-      alert("Nope, "+userName+"! Dani has been to EVERY continent except for South America and Antarctica.");
-      incorrectCounter++;
-    }
-      else {
-      console.log("--answered incorrectly")
-      alert("Nope, "+userName+"! Dani has only been to 5 continents.");
-      incorrectCounter++;
-    }
-    alert("All done, "+userName+" you got "+correctCounter+" correct and "+incorrectCounter+" wrong.");
-    console.log("answered correctly: "+correctCounter+" answered incorrectly: "+incorrectCounter);
-
-    var questionFive = prompt("BONUS-BONUS: Pick a number:")
-    var qFiveanswer =25
-    console.log("Question Five - Pick a number. Correct answer: 25; User Input "+questionFive)
-    while (qFiveanswer != questionFive){
-      if (questionFive<qFiveanswer){
-        questionFive = prompt("Too low! Pick another number:");
-      }else {
-        questionFive = prompt("Too high! Pick another number:");
-      }
-      console.log("Question Five - Pick a number. Correct answer: 25; User Input "+questionFive)
-    }
-
-      alert("Yay! "+userName+", 25 is the right number!")
-
-  </script>
+  <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
 </head>
-  <body>
-    <h1><center><font color="navy">Hello World -- It's Me...<br>
-    Dani Beyer!</center></h1>
-    <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAjcAAAAJGJlYzdjNGRmLWE2OTktNDg0YS1iMzBlLTJiZDg1MzljN2Y4Mw.jpg">
-    <font color="blue">
-    <h2> <p>So, what about me?</p> </h2>
-    <b>
+<body>
+  <h1>Welcome, <span id="user-name"></span>. <br>It's me...<br>
+  Dani Beyer!</h1>
+
+<br>
+<!--Quiz buttons-->
+<div class="buttons">
+<input type="button" value="Let's Take a Quiz" onclick="quiz()">
+<input type="button" value="BONUS!" onclick="q5()">
+</div>
+<br>
+
+<!-- Create column 1 -->
+<div class="column1of4">
+<h2> <p>So, what about me?</p></h2>
+
       <ol>
         <li>Name: Dani Beyer</li>
         <li>Married: Yes</li>
@@ -99,16 +28,44 @@
         <li>Education: BA, Anthropology; MBA</li>
 
       </ol>
-    </b>
-  <h2> <font color="green">Fun facts</h2>
-    <ul><font color="green">
+    </div>
+
+<!-- Create column 2 -->
+<div class="column2of4">
+  <h2> Fun facts</h2>
+    <ul>
       <li>Traveled to <STRONG>every continent</STRONG> except Antarctica and South America.</li>
       <li>There were <STRONG>wild buffalo</STRONG> roaming at my wedding.</li>
       <li>I've lived on<STRONG> both coasts</STRONG> and in <STRONG>the middle</STRONG>.</li>
     </ul>
+  </div>
 
 
 
+<!-- Create column 4 - Quiz Responses-->
+<div class="column3of4">
+<h2><span id="quiz-outcome"></span><br></h2>
+<h3> <span id="question-one"></span><br>
+<span id="question-two"></span><br>
+<span id="question-three"></span><br>
+<span id="question-four"></span><br>
+</h3>
+<h2 class=test> <span id='test-results'></span></h2>
 
-    </body>
+<!--BONUS response display-->
+
+<h3><span id="question-five"></span></h3>
+</div>
+
+
+<!-- Create column 3 -->
+<div class="column4of4">
+  <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAjcAAAAJGJlYzdjNGRmLWE2OTktNDg0YS1iMzBlLTJiZDg1MzljN2Y4Mw.jpg" alt="Dani and Jamie" class="align-right"/>
+</div>
+
+<div class="clear">
+</div>
+<script src="game.js" type="text/javascript">
+</script>
+</body>
 </html>
