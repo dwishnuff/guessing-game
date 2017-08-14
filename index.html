@@ -2,70 +2,80 @@
 <head>
   <title>Dani Beyer</title>
   <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
-</head>
-<body>
-  <h1>Welcome, <span id="user-name"></span>. <br>It's me...<br>
-  Dani Beyer!</h1>
+  </head>
+  <body>
+    <!-- Display image -->
 
-<br>
-<!--Quiz buttons-->
-<div class="buttons">
-<input type="button" value="Let's Take a Quiz" onclick="quiz()">
-<input type="button" value="BONUS!" onclick="q5()">
-</div>
-<br>
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAjcAAAAJGJlYzdjNGRmLWE2OTktNDg0YS1iMzBlLTJiZDg1MzljN2Y4Mw.jpg" alt="Dani and Jamie" class="profilePic"/>
 
-<!-- Create column 1 -->
-<div class="column1of4">
-<h2> <p>So, what about me?</p></h2>
-
-      <ol>
-        <li>Name: Dani Beyer</li>
-        <li>Married: Yes</li>
-        <li>Kids: 1</li>
-        <li>Dogs: 1</li>
-        <li>Born in: CA</li>
-        <li>Education: BA, Anthropology; MBA</li>
-
-      </ol>
-    </div>
-
-<!-- Create column 2 -->
-<div class="column2of4">
-  <h2> Fun facts</h2>
-    <ul>
-      <li>Traveled to <STRONG>every continent</STRONG> except Antarctica and South America.</li>
-      <li>There were <STRONG>wild buffalo</STRONG> roaming at my wedding.</li>
-      <li>I've lived on<STRONG> both coasts</STRONG> and in <STRONG>the middle</STRONG>.</li>
-    </ul>
-  </div>
+    <h1 id=header>Welcome, <span id="user-name"></span>. <br>It's me...<br>
+      Dani Beyer!</h1>
 
 
 
-<!-- Create column 4 - Quiz Responses-->
-<div class="column3of4">
-<h2><span id="quiz-outcome"></span><br></h2>
-<h3> <span id="question-one"></span><br>
-<span id="question-two"></span><br>
-<span id="question-three"></span><br>
-<span id="question-four"></span><br>
-</h3>
-<h2 class=test> <span id='test-results'></span></h2>
-
-<!--BONUS response display-->
-
-<h3><span id="question-five"></span></h3>
-</div>
 
 
-<!-- Create column 3 -->
-<div class="column4of4">
-  <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAjcAAAAJGJlYzdjNGRmLWE2OTktNDg0YS1iMzBlLTJiZDg1MzljN2Y4Mw.jpg" alt="Dani and Jamie" class="align-right"/>
-</div>
+      <!-- Create divs for About Me sections -->
+      <div class="aboutMe info-section">
+        <h2> So, what about me?</h2>
 
-<div class="clear">
-</div>
-<script src="game.js" type="text/javascript">
-</script>
-</body>
-</html>
+        <ol>
+          <li>Name: Dani Beyer</li>
+          <li>Married: Yes</li>
+          <li>Kids: 1</li>
+          <li>Dogs: 1</li>
+          <li>Born in: CA</li>
+          <li>Education: BA, Anthropology; MBA</li>
+
+        </ol>
+      </div>
+
+      <!-- Create Fun Facts section -->
+      <div class="funFacts info-section">
+        <h2> Fun facts</h2>
+        <ul>
+          <li>Traveled to <STRONG>every continent</STRONG> except Antarctica and South America.</li>
+          <li>There were <STRONG>wild buffalo</STRONG> roaming at my wedding.</li>
+          <li>I've lived on<STRONG> both coasts</STRONG> and in <STRONG>the middle</STRONG>.</li>
+        </ul>
+      </div>
+
+      <div class="clear">
+      </div>
+      <br>
+
+
+      <!--Quiz buttons-->
+      <div class="buttons info-section">
+        <h2>Let's take a Quiz! --> push the button!</h2>
+        <div class="actual-buttons"><input type="button" value="QUIZ" onclick="quiz()">
+        <input type="button" value="BONUS!" onclick="q5()"></div>
+      </div>
+      <br>
+
+      <!-- Create column 4 - Quiz Responses-->
+      <div class="quizanswers info-section">
+        <h2><span id="quiz-outcome"></span><br></h2>
+        <h3> <p>1. Does Dani have a cat?</p>
+          <span id="question-one"></span><br>
+          <p>2. Was Dani born in MA?</p>
+          <span id="question-two"></span><br>
+          <p>3. Does Dani have a degree in Anthropology?</p>
+          <span id="question-three"></span><br>
+          <p>4. How many continents has Dani been to?</p>
+          <span id="question-four"></span><br>
+        </h3>
+        <h2 class=test> <span id='test-results'></span></h2>
+
+        <!--BONUS response display-->
+
+        <h2><span id="question-five"></span></h2>
+      </div>
+
+
+      <div class="clear">
+      </div>
+      <script src="game.js" type="text/javascript">
+      </script>
+    </body>
+    </html>

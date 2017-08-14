@@ -4,42 +4,102 @@
 
 
 
-h1 {
+#header {
+width: calc(100% - 430px);
   text-align: center;
+  vertical-align: middle;
   color: #30488C;
   font-family:Georgia;Palatino;serif;
-  background-color: #5CD15C;
+  font-size: 42px;
+  background-color: #24AD24;
+  display: inline-block;
+  border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+
 }
 
-img.align-right {
+img.profilePic {
+  display: inline-block;
   border:10px solid #516394;
+  border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+  vertical-align: middle;
 
 }
 
-.column1of4, .column2of4, .column3of4, .column4of4 {
+/*.column1of4, .column2of4, .column3of4, .column4of4 {
   float: left;
   width: 22%;
-  margin: 1%;}
+  margin: 1%;}*/
 
-.column1of4 {
-  background-color: blue;
+.aboutMe {
+  display: inline-block;
+  background-color: #516394;
+  border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+  vertical-align: top;
+  font-size: 25px;
+  padding: 10px;
+  margin: 1%;
+  width: 45%;
 }
 
+.funFacts {
+  display: inline-block;
+  background-color: #5CD15C;
+  border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+  vertical-align: top;
+  font-size: 25px;
+  padding: 10px;
+  margin: 1%;
+  width: 45%;
+}
+
+.info-section h2 {
+  font-size: 35px;
+  color: white;
+}
+
+.info-section h3 {
+  font-size: 25px;
+}
+
+.quizanswers {
+  background-color: #5CD15C;
+  border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+  vertical-align: top;
+  font-size: 45px;
+  padding: 20px;
+  margin: 15px;
+
+}
+.quizanswers img {
+  width: 2em;
+}
 /*background for buttons*/
 .buttons {
-  background-color: #24AD24;
+  background-color: #30488C;
+  border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+  padding: 10px;
 }
-.buttons input{
+/*.buttons input{
   display: block;
   margin: 0 auto;
-}
+}*/
 
 .clear {
   clear:both;
 }
+.actual-buttons input{
+  font-size: 30px;
+  display: inline-block;
+  margin: 1em;
+}
+
+.actual-buttons {
+    text-align: right;
+}
+
 
 /*color coding for quiz answers*/
-.test2 {color:green;}
+
 .wrong {color:red;}
 .test {color:#30488C;}
 .yeppers {color:green;}

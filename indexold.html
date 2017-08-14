@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dani Beyer</title>
+<!--<script src="game.js" type="text/javascript"></script>-->
+  <script type="text/javascript">
+    var userName = prompt("Dani says 'hi'. What's your name?", "");
+    console.log("User Name: "+userName)
+    alert("Hello "+userName+", so glad you're here!");
+//add variables to count number correct/incorrect.
+    var incorrectCounter=0;
+    var correctCounter =0;
+    /*var temperature = prompt ("Is it hot outside?","yes/no");
+    if (temperature == "yes" || temperature=="YES" || temperature == "Yes"){
+      alert("So sorry. Go get a beer to cool off.");
+    } else {
+      alert("Whew! I was getting tired of the heat.")*/
+
+//Q1 - Pets
+    var questionOne = prompt("Does Dani have a cat?", "yes/no");
+    console.log("Question One - Does Dani Have a cat? User Input: "+questionOne)
+    if (questionOne == "yes" || questionOne =="Yes" || questionOne == "YES") {
+      console.log("--answered incorrectly")
+      alert("Nope "+userName+", Dani has one 4 month old puppy.");
+      incorrectCounter++;
+    } else {
+      console.log("--answered correctly")
+      alert("That’s right, "+userName+"! Dani has one 4 month old puppy.");
+      correctCounter++;
+    }
+
+//Q2 - place of birth
+    var questionTwo = prompt("Was Dani born in MA?", "yes/no");
+    console.log("Question Two - Was Dani born in MA? User Input: "+questionTwo)
+    if (questionTwo == "yes" || questionTwo == "Yes" || questionTwo =="YES") {
+      console.log("--answered incorrectly")
+      alert("Nope "+userName+", Dani was born in San Jose, CA.");
+      incorrectCounter++;
+    } else {
+      console.log("--answered correctly")
+      alert("That’s right, "+userName+"! Dani was born in San Jose, CA.");
+      correctCounter++;
+    }
+
+  //Q3 - education
+    var questionThree = prompt("Does Dani have a degree in Anthropology?", "yes/no");
+    console.log("Question Three - Does Dani have a degree in Anthropology? User Input: "+questionThree)
+    if (questionThree == "yes" || questionThree == "Yes" || questionThree =="YES") {
+      console.log("--answered correctly");
+      correctCounter++;
+      alert("That’s right, "+userName+"! Dani has a BA in Biological Anthropology from the University of California, San Diego.");
+    } else {
+      console.log("--answered incorrectly")
+      alert("Nope "+userName+",  Dani does have a BA in Biological Anthropology from the University of California, San Diego.");
+      incorrectCounter++;
+    }
+
+//Q4 - education
+//Compare answers to correct answer of 5.
+    var questionFour = prompt("BONUS: How many continents has Dani been to?");
+    console.log("Question Four - How many continents has Dani been to? User Input: "+questionFour)
+    if (questionFour == "5" || questionFour == "five") {
+      console.log("--answered correctly");
+      correctCounter++;
+      alert("That’s right, "+userName+"! Dani has never been to South America or Antarctica.");
+    } else if (questionFour<5) {
+      console.log("--answered incorrectly")
+      alert("Nope, "+userName+"! Dani has been to EVERY continent except for South America and Antarctica.");
+      incorrectCounter++;
+    }
+      else {
+      console.log("--answered incorrectly")
+      alert("Nope, "+userName+"! Dani has only been to 5 continents.");
+      incorrectCounter++;
+    }
+//Total answered correctly
+    alert("All done, "+userName+" you got "+correctCounter+" correct and "+incorrectCounter+" wrong.");
+    console.log("answered correctly: "+correctCounter+" answered incorrectly: "+incorrectCounter);
+
+//Q5 - Pick a #
+    var questionFive = prompt("BONUS-BONUS: Pick a number:")
+    var qFiveanswer =25
+    console.log("Question Five - Pick a number. Correct answer: 25; User Input "+questionFive)
+    while (qFiveanswer != questionFive){
+      if (questionFive<qFiveanswer){
+        questionFive = prompt("Too low! Pick another number:");
+      }else {
+        questionFive = prompt("Too high! Pick another number:");
+      }
+      console.log("Question Five - Pick a number. Correct answer: 25; User Input "+questionFive)
+    } //while(qFiveanswer != questionFive)
+
+      alert("Yay! "+userName+", 25 is the right number!")
+
+  </script>
+</head>
+  <body>
+    <h1><center><font color="navy">Hello World -- It's Me...<br>
+    Dani Beyer!</center></h1>
+    <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAjcAAAAJGJlYzdjNGRmLWE2OTktNDg0YS1iMzBlLTJiZDg1MzljN2Y4Mw.jpg">
+    <font color="blue">
+    <h2> <p>So, what about me?</p> </h2>
+    <b>
+      <ol>
+        <li>Name: Dani Beyer</li>
+        <li>Married: Yes</li>
+        <li>Kids: 1</li>
+        <li>Dogs: 1</li>
+        <li>Born in: CA</li>
+        <li>Education: BA, Anthropology; MBA</li>
+
+      </ol>
+    </b>
+  <h2> <font color="green">Fun facts</h2>
+    <ul><font color="green">
+      <li>Traveled to <STRONG>every continent</STRONG> except Antarctica and South America.</li>
+      <li>There were <STRONG>wild buffalo</STRONG> roaming at my wedding.</li>
+      <li>I've lived on<STRONG> both coasts</STRONG> and in <STRONG>the middle</STRONG>.</li>
+    </ul>
+
+
+
+
+    </body>
+</html>
