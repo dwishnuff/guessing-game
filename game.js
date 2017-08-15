@@ -3,6 +3,8 @@ var incorrectCounter=0;
 var correctCounter=0;
 var message=""
 var userName= getUserName()
+var msg=""
+var indexLucky
 
 //get userName
 function getUserName(){
@@ -12,6 +14,14 @@ function getUserName(){
   return userName;
 }
 //write userName
+
+//Today's luckNumber
+var luckyNumber = [5,10,15,20,25,30,35,40,45,50];
+var indexLucky=prompt("Pick a number between 0-9 to get a lucky number.")
+var msg = luckyNumber[indexLucky]
+
+document.getElementById('todaysLucky').innerHTML = msg;
+
 
 
 //create top level quiz function
